@@ -2,6 +2,7 @@ import React from "react";
 import {
   Container,
   Typography,
+  TextField,
   Table,
   TableBody,
   TableCell,
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   resultContainer: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "left"
   },
   resultTable: {
     marginTop: theme.spacing(2)
@@ -50,9 +51,27 @@ const ResultPage = ({ formData }) => {
     doc.setFontSize(12);
     doc.text(
       `Project Name: ${formData.projectName}`,
-      doc.internal.pageSize.getWidth() / 2,
+      10,
       30,
-      { align: "center" }
+      { align: "left" }
+    );
+    doc.text(
+      `Project Description: ${formData.projectDesc}`,
+      10,
+      40,
+      { align: "left" }
+    );
+    doc.text(
+      `Client: ${formData.projectClient}`,
+      10,
+      50,
+      { align: "left" }
+    );
+    doc.text(
+      `Contractor: ${formData.projectContractor}`,
+      10,
+      60,
+      { align: "left" }
     );
 
     const tableData = [
@@ -64,7 +83,7 @@ const ResultPage = ({ formData }) => {
     doc.autoTable({
       head: [["", "Minimum", "Maximum"]],
       body: tableData,
-      startY: 40,
+      startY: 70,
       theme: "grid",
       styles: {
         fontSize: 12,
@@ -77,14 +96,25 @@ const ResultPage = ({ formData }) => {
   };
 
   return (
-    <Container className={classes.resultContainer}>
-      <Typography variant="h4" gutterBottom>
-        Result Summary
-      </Typography>
-      <Typography variant="h6" gutterBottom>
-        Project Name: {formData.projectName}
-      </Typography>
-
+    <Container className={classes.resultContainer} >
+      <Typography variant="h4" className={classes.header} align="center">
+          Result Page
+        </Typography>
+      <div className={classes.inputGroup}>
+      <Typography variant="h6">
+          Project Name: {formData.projectName}
+        </Typography>
+        <Typography variant="h6" >
+          Project Description: {formData.projectDesc}
+        </Typography>
+        <Typography variant="h6" >
+          Client: {formData.projectClient}
+        </Typography>
+        <Typography variant="h6">
+          Contractor: {formData.projectContractor}
+        </Typography>
+        
+      </div>
       <TableContainer className={classes.resultTable}>
         <Table>
           <TableHead>

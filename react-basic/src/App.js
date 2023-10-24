@@ -88,6 +88,9 @@ const Prototype = () => {
   const classes = useStyles();
   const [step, setStep] = useState(1);
   const [projectName, setProjectName] = useState("");
+  const [projectDesc, setProjectDesc] = useState("");
+  const [projectClient, setProjectClient] = useState("");
+  const [projectContractor, setProjectContractor] = useState("");
   const [, setCsvFile] = useState(null);
   const [maxX, setMaxX] = useState("");
   const [minX, setMinX] = useState("");
@@ -173,6 +176,9 @@ const Prototype = () => {
 
   const formData = {
     projectName,
+    projectDesc,
+    projectClient,
+    projectContractor,
     maxX,
     minX,
     maxY,
@@ -203,6 +209,30 @@ const Prototype = () => {
                 onChange={(e) => setProjectName(e.target.value)}
                 className={classes.inputGroup}
               />
+              <TextField
+                label="Project Description"
+                variant="outlined"
+                fullWidth
+                value={projectDesc}
+                onChange={(e) => setProjectDesc(e.target.value)}
+                className={classes.inputGroup}
+              />
+              <TextField
+                label="Client Name"
+                variant="outlined"
+                fullWidth
+                value={projectClient}
+                onChange={(e) => setProjectClient(e.target.value)}
+                className={classes.inputGroup}
+              />
+              <TextField
+                label="Contractor Name"
+                variant="outlined"
+                fullWidth
+                value={projectContractor}
+                onChange={(e) => setProjectContractor(e.target.value)}
+                className={classes.inputGroup}
+              />
 
               <div className={classes.buttonGroup}>
                 <Button
@@ -220,9 +250,58 @@ const Prototype = () => {
               <Typography variant="h6" className={classes.header}>
                 Step 2: CSV File Upload and Min-Max Values
               </Typography>
-              <Typography variant="body1" className={classes.header}>
-                Project Name: {projectName}
-              </Typography>
+              <div className={classes.inputGroup}>
+              <TextField
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  readOnly: true, // Make the input field read-only
+                }}
+                InputLabelProps={{
+                  shrink: true, // Move the label up when the input is focused
+                }}
+                label="Project Name"
+                value={projectName}
+              />
+              <TextField
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  readOnly: true, // Make the input field read-only
+                }}
+                InputLabelProps={{
+                  shrink: true, // Move the label up when the input is focused
+                }}
+                label="Project Description"
+                value={projectDesc}
+              />
+              <TextField
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  readOnly: true, // Make the input field read-only
+                }}
+                InputLabelProps={{
+                  shrink: true, // Move the label up when the input is focused
+                }}
+                label="Client"
+                value={projectClient}
+              />
+              <TextField
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  readOnly: true, // Make the input field read-only
+                }}
+                InputLabelProps={{
+                  shrink: true, // Move the label up when the input is focused
+                }}
+                label="Contractor"
+                value={projectContractor}
+              />
+              </div>
+              
+              
               <input
                 type="file"
                 accept=".csv"
