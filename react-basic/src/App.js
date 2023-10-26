@@ -255,10 +255,10 @@ const Prototype = () => {
                 variant="outlined"
                 fullWidth
                 InputProps={{
-                  readOnly: true, // Make the input field read-only
+                  readOnly: true, 
                 }}
                 InputLabelProps={{
-                  shrink: true, // Move the label up when the input is focused
+                  shrink: true, 
                 }}
                 label="Project Name"
                 value={projectName}
@@ -267,10 +267,10 @@ const Prototype = () => {
                 variant="outlined"
                 fullWidth
                 InputProps={{
-                  readOnly: true, // Make the input field read-only
+                  readOnly: true,
                 }}
                 InputLabelProps={{
-                  shrink: true, // Move the label up when the input is focused
+                  shrink: true, 
                 }}
                 label="Project Description"
                 value={projectDesc}
@@ -279,10 +279,10 @@ const Prototype = () => {
                 variant="outlined"
                 fullWidth
                 InputProps={{
-                  readOnly: true, // Make the input field read-only
+                  readOnly: true,
                 }}
                 InputLabelProps={{
-                  shrink: true, // Move the label up when the input is focused
+                  shrink: true,
                 }}
                 label="Client"
                 value={projectClient}
@@ -291,10 +291,10 @@ const Prototype = () => {
                 variant="outlined"
                 fullWidth
                 InputProps={{
-                  readOnly: true, // Make the input field read-only
+                  readOnly: true,
                 }}
                 InputLabelProps={{
-                  shrink: true, // Move the label up when the input is focused
+                  shrink: true,
                 }}
                 label="Contractor"
                 value={projectContractor}
