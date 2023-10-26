@@ -3,10 +3,10 @@
 ![Input Project Name, Description, Client, Contractor](images/page1.png)
 
 ### Upload CSV or input values manually. (Text fields are not editable)
-![Step2](images/page 2.png)
+![Step2](images/page2.png)
 
 ### Graph and Min/Max values from CSV file
-![CSV](images/csv file.png)
+![CSV](images/csvfile.png)
 
 ### Result Page
 ![Result Page](images/Result.png)
