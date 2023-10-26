@@ -195,7 +195,7 @@ const Prototype = () => {
         </Toolbar>
       </AppBar>
       <Container className={classes.container}>
-        <Card className={`${classes.card} animated fadeIn`} style={{backgroundColor: '#cacdc6'}}>
+        <Card className={`${classes.card} animated fadeIn`} style={{backgroundColor: '#EFEFFF'}}>
           {step === 1 && (
             <div>
               <Typography variant="h6" className={classes.header}>
